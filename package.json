@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-ts-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nuxt typescript proejct using nuxt-ts",
+  "keywords": [
+    "nuxt",
+    "typescript"
+  ],
+  "author": "Taketo Yoshida",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint": "tslint --project .",
+    "post-update": "yarn upgrade --latest"
+  },
+  "dependencies": {
+    "nuxt-ts-edge": "latest",
+    "vue-property-decorator": "^7.3.0",
+    "vuex-class": "^0.3.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "tslint-config-prettier": "^1.17.0"
+  }
+}
