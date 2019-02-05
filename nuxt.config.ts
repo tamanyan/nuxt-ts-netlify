@@ -61,7 +61,6 @@ export default {
   },
 
   proxy: {
-    // '/api': { target: 'http://localhost:8000/.netlify/functions/', pathRewrite: { '^/api/': '' } }
     '/.netlify/': { target: 'http://localhost:9000/' }
   },
 }

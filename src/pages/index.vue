@@ -44,6 +44,8 @@ export default class Index extends Vue {
 
     // Set subtitle from message
     this.subtitle = response.msg
+
+    console.log('Your branch is', process.env.BRANCH)
   }
 }
 </script>
