@@ -1,0 +1,4 @@
+[build]
+  command = "yarn generate"
+  functions = ".lambda" #  netlify-lambda reads this
+  publish = "dist"

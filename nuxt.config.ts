@@ -49,4 +49,24 @@ export default {
    ** Nuxt.js modules
    */
   modules: [],
+
+ /*
+  ** Build configuration
+  */
+  build: {
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config: any, ctx: any) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(ts|vue)$/,
+          loader: 'tslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
+  }
 }
