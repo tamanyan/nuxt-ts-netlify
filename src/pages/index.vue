@@ -6,7 +6,7 @@
         Nuxt TypeScript Sample
       </h1>
       <h2 class="subtitle">
-        Nuxt TypeScript Project
+        {{ subtitle }}
       </h2>
       <div class="links">
         <a
@@ -28,12 +28,24 @@
 import { Component, Vue } from 'vue-property-decorator'
 import Logo from '../components/Logo.vue'
 
+
 @Component({
   components: {
     Logo,
   }
 })
-export default class Index extends Vue {}
+export default class Index extends Vue {
+
+  subtitle: string = 'Nuxt TypeScript Project!'
+
+  async mounted() {
+    // Call Netlify Functions
+    const response = await this.$axios.$get('./.netlify/functions/hello')
+
+    // Set subtitle from message
+    this.subtitle = response.msg
+  }
+}
 </script>
 
 <style scoped>

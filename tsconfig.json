@@ -4,6 +4,7 @@
     "baseUrl": "./src/",
     "types": ["@types/node", "@nuxt/vue-app-edge"],
     "experimentalDecorators": true,
-    "allowJs": true
+    "allowJs": true,
+    "typeRoots" : ["./src/@types", ".node_modules/@types"]
   }
 }

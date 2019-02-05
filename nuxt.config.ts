@@ -48,25 +48,20 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
-
- /*
-  ** Build configuration
+  modules: [
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+  ],
+  /*
+  ** Axios module configuration
   */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config: any, ctx: any) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(ts|vue)$/,
-          loader: 'tslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+  axios: {
+    proxy: true // Can be also an object with default options
+  },
+
+  proxy: {
+    // '/api': { target: 'http://localhost:8000/.netlify/functions/', pathRewrite: { '^/api/': '' } }
+    '/.netlify/': { target: 'http://localhost:9000/' }
+  },
 }
