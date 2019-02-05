@@ -1,6 +1,8 @@
 # Nuxt Typescript Netlify
 
-> A Nuxt typescript example template with nuxt-ts on Netligy.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/96700b67-a3c2-4e83-af46-e80a7df3ba91/deploy-status)](https://app.netlify.com/sites/thirsty-hodgkin-caaecc/deploys)
+
+> A Nuxt typescript example template with nuxt-ts on Netlify.
 
 This template is an example of typescript using **nuxt-ts**, which was recently announced with [Nuxt V2.4.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.4.0) release.
 
@@ -18,7 +20,6 @@ $ yarn or npm install
 # Start dev server
 $ yarn dev
 
-# Build & Start server for production
-$ yarn build
-$ yarn start
+# Build & Generate HTML
+$ yarn generate
 ```
