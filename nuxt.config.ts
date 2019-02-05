@@ -1,4 +1,8 @@
 export default {
+  env: {
+    BRANCH: process.env.BRANCH || 'undefined'
+  },
+
   /*
    ** Nuxt mode
    ** Possible values:
