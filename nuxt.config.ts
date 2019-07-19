@@ -26,13 +26,11 @@ export default {
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   generate: {
     dir: './dist',
-    routes: [
-      '/'
-    ]
+    routes: ['/'],
   },
 
   /*
